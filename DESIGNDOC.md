@@ -2,7 +2,7 @@
 
 * Status: Draft
 * Authors: jakecoggiano@gmail.com
-* Last Updated: 2015-01-14
+* Last Updated: 2015-01-28
 
 ### Objective
 Enable users of OS X to quickley and easily create a self contained "Apple Hardware Test" USB flash drive for D.I.Y. Mac® hardware diagnostics and troubleshooting
@@ -27,12 +27,13 @@ Apple Hardware Test USB Creator is an attempt to roll the functionality of these
 https://drive.google.com/open?id=13j950hTZJLbgcB8Qs7sKNt99sb3GFS1VSrWvdfLkHCI
 
 ### Project Information
-* Python 2.7
-* Google Cloud SQL
-* Python GUI of Some Sort?
+* Python 3.x (Core functionality)
+* Bash (Commands sent via Python Subprocess)
+* Google Sheets (Rudimentary database)
+* PyQt x.x (GUI)
 
 ### Caveats
-Creating an attractive GUI will be challenging. A simple CLI interface is doable for a prototype, but only a GUI interface will be something novice users are comfortable with.
+A rock solid CLI version must be created before embarking on the PyQt portion of this project. However,  without a PyQt version of this program, the core Mac audience will be uncomfortable weilding this tool.
 
 ### Security Considerations
 The script requires superuser privileges in order to perform certain core functions:
@@ -40,8 +41,9 @@ The script requires superuser privileges in order to perform certain core functi
 
 ### Privacy Considerations
 Users need to understand that the only statistical data send back to the App Devs is the following:
-	* Mac Model
-	* Did the script fail and if so why...
+* Mac Model
+* Version of program
+* Did the script fail and if so why...
 
 ## Testing Plan
-Build CLI prototype and run it against multiple Mac models. When the CLI version is solid I can consider creating a GUI
+Build CLI prototype and run it against multiple Mac models. Once a rock solid CLI tool has been created development can shift to creating a PyQtbased GUI.
