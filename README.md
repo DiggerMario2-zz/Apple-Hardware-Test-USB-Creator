@@ -1,7 +1,7 @@
 # Apple-Hardware-Test-USB-Creator
 Create a self contained "Apple Hardware Test" USB flash drive for D.I.Y. Mac® hardware diagnostics and troubleshooting
 
-[Homepage](https://github.com/DiggerMario2/Apple-Hardware-Test-USB-Creator) | [Project Site](https://github.com/DiggerMario2/Apple-Hardware-Test-USB-Creator) | [Design Doc](https://docs.google.com/document/d/1_iovD5ZCRvwj4bjbiHkoEtEG1HQCvc4Ra5_vSoafxN4/edit#) [Issue Tracker](https://github.com/DiggerMario2/Apple-Hardware-Test-USB-Creator/pulls) | [Coding Style](https://www.python.org/dev/peps/pep-0008/)
+[Homepage](https://github.com/DiggerMario2/Apple-Hardware-Test-USB-Creator) | [Project Site](https://github.com/DiggerMario2/Apple-Hardware-Test-USB-Creator) | [Design Doc](https://docs.google.com/document/d/1_iovD5ZCRvwj4bjbiHkoEtEG1HQCvc4Ra5_vSoafxN4/edit#) | [Issue Tracker](https://github.com/DiggerMario2/Apple-Hardware-Test-USB-Creator/pulls) | [Coding Style](https://www.python.org/dev/peps/pep-0008/)
 
 Apple Hardware Test USB Creator is a program used to simplify the aquisition and use of the "Apple Hardware Test" suite of Mac hardware diagnostics software. 
 * Apples's software is NOT MODIFIED in any way through the use of this tool. 
@@ -27,8 +27,8 @@ This software is licensed under the terms of the GNU General Public License, ver
 
 ## Change Log
 * V1 Jan 28, 2016
-    * I intend to have the final version of this program packaged in ".app" format with a nice GUI. The v1 script you are examining is merely a prototype. Please don't judge too harshly :)
+    * The final version of this program packaged in ".app" format with a nice GUI. The v1 script you are examining is merely a prototype.
 
-## Credits, Thanks, Standing on the shoulders of giants
+## Credits and Thanks
 * [upekkha](https://github.com/upekkha/AppleHardwareTest) for the initial compilation of information regarding manual creation of Apple Hardware Test USB flash drives.
 * Google ITRP: Take chances, make mistakes, get messy
