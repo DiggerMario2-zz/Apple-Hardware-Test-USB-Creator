@@ -21,14 +21,14 @@ This software is licensed under the terms of the GNU General Public License, ver
     * Python Modules: Colorama, Gdata, and PlistLib
 
 ## Installation Steps
-    * Open "Terminal"
-    * "cd" to the program's downloaded directory
-    * Run "sudo Python main.py"
+* Open "Terminal"
+* "cd" to the program's downloaded directory
+* Run "sudo Python main.py"
 
 ## Change Log
-### V1 Jan 28, 2016
+* V1 Jan 28, 2016
     * I intend to have the final version of this program packaged in ".app" format with a nice GUI. The v1 script you are examining is merely a prototype. Please don't judge too harshly :)
 
 ## Credits, Thanks, Standing on the shoulders of giants
-    * [upekkha](https://github.com/upekkha/AppleHardwareTest) for the initial compilation of information regarding manual creation of Apple Hardware Test USB flash drives.
-    * Google ITRP: Take chances, make mistakes, get messy
+* [upekkha](https://github.com/upekkha/AppleHardwareTest) for the initial compilation of information regarding manual creation of Apple Hardware Test USB flash drives.
+* Google ITRP: Take chances, make mistakes, get messy
