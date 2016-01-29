@@ -8,7 +8,7 @@ Apple Hardware Test USB Creator is a program used to simplify the aquisition and
 * The authors of this tool are not affiliated with Apple Inc.
 * "Mac" and "Apple Hardware Test" are [registered trademarks of Apple Inc](http://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html).
 
-This software is licensed under the terms of the GNU General Public License, version 3 or later (GPLv3+).
+This software is licensed under the terms of the [GNU General Public License, version 3 or later (GPLv3+)](https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)).
 
 ## System Requirements
 * OS
@@ -31,4 +31,4 @@ This software is licensed under the terms of the GNU General Public License, ver
 
 ## Credits and Thanks
 * [upekkha](https://github.com/upekkha/AppleHardwareTest) for the initial compilation of information regarding manual creation of Apple Hardware Test USB flash drives.
-* Google ITRP: Take chances, make mistakes, get messy
+* [Google ITRP](https://www.google.com/about/careers/search#!t=jo&jid=3395002&): Take chances, make mistakes, get messy
