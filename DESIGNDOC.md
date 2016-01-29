@@ -5,24 +5,23 @@
 * Last Updated: 2015-01-14
 
 ### Objective
-Allow OS X users to quickly and easily create Apple Hardware Test USB flash drives to diagnose issues with outdated Apple hardware.
+Enable users of OS X to quickley and easily create a self contained "Apple Hardware Test" USB flash drive for D.I.Y. Mac® hardware diagnostics and troubleshooting
 
 ### Background
-Apple Hardware Test (henceforth referred to as AHT) is a troubleshooting tool used to verify the integrity of hardware components found in Intel Apple Macs manufactured between 2007 and 2013.
+Apple Hardware Test (henceforth referred to as AHT) is an Apple hardware diagnostics and troubleshooting tool designed for for use with Macs manufactered between 2007 and 2013.
 
-The AHT suite is accessed by holding the “D” key at boot time. The tool then attempts to boot from the factory installed location of: /System/Library/CoreServices/.diagnostics
+The tool is factory installed in the "/System/Library/CoreServices/.diagnostics" directory of OS X, and can be accessed at boot by holding the “D” key during the classic Mac startup chime. 
 
-Unfortunately, OS X upgrades do not account for the presence of this tool. Often times users will unknowingly delete the AHT suite upon the clean install of a new version of OS X.
-
-As of June 2013 Apple has replaced the Apple Hardware Test suite with a new suite of diagnostic tools known as “Apple Diagnostics”. Apple Diagnostics is only compatible with Macs manufactured post June 2013- older Macs still need the AHT suite.
+Unfortunaley, like any other file on your hard drive, the AHT directory can inadvertantly be trashed. Often times this will occur during an OS reinstallation, leaving the new Mac OS X install without a functioning AHT Suite.
 
 ###Overview
-The Apple Hardware Test USB tool, is an application designed to restore the functionality of the AHT suite through the use of a portable USB flash drive. The USB tool downloads the appropriate version of the AHT suite, write it to a USB flash drive, and allow users to boot from the drive at startup.
 
-A current application of this project can be found at the following github page:
-https://github.com/upekkha/AppleHardwareTest/blob/master/Readme.markdown 
+The Apple Hardware Test USB Creator restores the fuctionality of the AHT suite by downloading a fresh copy from Apple servers, and saving it to a portable USB thumb drive that users can store away for safe keeping. 
 
-Apple Hardware Test USB is an attempt to roll the functionality of these instructions into an easy “Point and Click” application for OS X. The application should be easy enough for a novice to wield, yet useful enough for the lazy sysadmin.
+Instructions for the manual creation of a flash frive based AHT suite can be found at the following github page:
+https://github.com/upekkha/AppleHardwareTest/blob/master/Readme.markdown
+
+Apple Hardware Test USB Creator is an attempt to roll the functionality of these instructions into an easy “Point and Click” application for OS X. The application should be easy enough for a novice to wield, yet useful enough for the lazy sysadmin.
 
 ### Detailed Design Flow
 https://drive.google.com/open?id=13j950hTZJLbgcB8Qs7sKNt99sb3GFS1VSrWvdfLkHCI
