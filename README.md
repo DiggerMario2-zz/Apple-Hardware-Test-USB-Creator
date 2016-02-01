@@ -26,8 +26,20 @@ This software is licensed under the terms of the [GNU General Public License, ve
 * Run "sudo Python main.py"
 
 ## Change Log
-* V1 Jan 28, 2016
-    * The final version of this program packaged in ".app" format with a nice GUI. The v1 script you are examining is merely a prototype.
+* 0.0.0 Jan 14, 2016 - Design Doc and Prototype
+    * Demo
+        * Pyusb and usblib to read devices on usb bus
+        * Gdata API documented
+    * Design doc w/ flowcharting
+* 0.1.0 Jan 28, 2016 - Initial Github push
+    * CLI formatting of USB drives works    
+    * Python 2.7
+    * Gdata API used to retrive Google Sheets data
+* 0.2.0 Jan 28, 2016 - Migration to Python 3, Optimizations
+    * Migrated to Python 3.x
+       * urllib replaces gdata for data retrieval of data
+       * plistlib functions changed to accomodate 3.x deprecations
+
 
 ## Credits and Thanks
 * [upekkha](https://github.com/upekkha/AppleHardwareTest) for the initial compilation of information regarding manual creation of Apple Hardware Test USB flash drives.
