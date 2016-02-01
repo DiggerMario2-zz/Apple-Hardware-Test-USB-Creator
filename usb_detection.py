@@ -18,6 +18,7 @@ def indenter(indent_value):
 
 def set_color(color):
     """Color text per a supplied argument."""
+    new_text_color = ""
     if color == 1 or color == 'W' or color == 7:
         new_text_color = colorama.Fore.WHITE
     if color == 2 or color == 'R' or color == 8:
@@ -34,53 +35,46 @@ def set_color(color):
 
 def traverse_plist(plist_object, indent_value, plist_map, valid_usb_drives):
     """Crawl supplied plist XML file for USB Mass Storage drives"""
+    indent = indenter(indent_value)
     #indent = indenter(indent_value)
-    #indent = indenter(indent_value)
-
-    if  (not isinstance(plist_object, plistlib._InternalDict) or
-         not isinstance(plist_object, list)):
+    
+    if  (not isinstance(plist_object, dict) and not isinstance(plist_object, list)):
         indent_value += 1
         plist_map = plist_map + [plist_object]
-        #print (set_color(indent_value) + indenter(indent_value) +
-               #(type(plist_object).__name__).upper() + " VAL: " +
-               #str(plist_object) + set_color('W')
-        #print (set_color(indent_value) + indenter(indent_value) + "PATH: " +
-               #str(plist_map) + set_color('W')
+        print (set_color(indent_value) + indenter(indent_value) +
+               (type(plist_object).__name__).upper() + " VAL: " +
+               str(plist_object) + set_color('W'))
+        print (set_color(indent_value) + indenter(indent_value) + "PATH: " +
+               str(plist_map) + set_color('W'))
 
     if isinstance(plist_object, list):
         indent_value += 1
-        #print (set_color(indent_value) + indenter(indent_value) +
-               #"LIST START" + set_color('W')
+        print (set_color(indent_value) + indenter(indent_value) +
+               "LIST START" + set_color('W'))
         for index, item in enumerate(plist_object):
             traverse_plist(item, indent_value, plist_map +
                            [index], valid_usb_drives)
 
-    if isinstance(plist_object, plistlib._InternalDict):
+    if isinstance(plist_object, dict):
         indent_value += 1
-        #print (set_color(indent_value) + indenter(indent_value) +
-               #"DICT START" + set_color('W')
+        print (set_color(indent_value) + indenter(indent_value) +
+               "DICT START" + set_color('W'))
 
         if ('detachable_drive' in plist_object and
                 'removable_media' in plist_object):
-            #print (set_color('G') +
-                    #'\nFound "detachable_drive" and "removable_media"' +
-                    #set_color('W')
+            print (set_color('G') + '\nFound "detachable_drive" and "removable_media"' + set_color('W'))
 
             if (plist_object['detachable_drive'] == 'yes' and
                     plist_object['removable_media'] == 'yes'):
-                #print (set_color('G') +
-                 #'Both "detachable_drive" and "removable_media" are "yes"' +
-                  #set_color('W')
+                print (set_color('G') + 'Both "detachable_drive" and "removable_media" are "yes"' + set_color('W'))
                 valid_usb_drives.append(plist_object)
 
-            #else:
-                #print (set_color('R') +
-                #'Either "detachable_drive" or "removable_media" are "no"' +
-                 #set_color('W')
+            else:
+                print (set_color('R') + 'Either "detachable_drive" or "removable_media" are "no"' + set_color('W'))
 
         for key in plist_object:
-            #print (set_color(indent_value) + indenter(indent_value) +
-                    #"KEY: " + key + set_color('W')
+            print (set_color(indent_value) + indenter(indent_value) +
+                    "KEY: " + key + set_color('W'))
             traverse_plist(plist_object[key], indent_value, plist_map +
                            [key], valid_usb_drives)
     return valid_usb_drives
@@ -88,9 +82,10 @@ def traverse_plist(plist_object, indent_value, plist_map, valid_usb_drives):
 
 def get_usb_drives():
     """Enumerate USB Drives attached to Mac"""
-    plist_string = (subprocess.Popen(["system_profiler", "SPUSBDataType",
+    plist_byte_object = (subprocess.Popen(["system_profiler", "SPUSBDataType",
                                       "-xml"], stdout=subprocess.PIPE,
-                                     stderr=subprocess.PIPE).communicate())
-    plist_object = plistlib.readPlistFromString(plist_string[0])
+                                     stderr=subprocess.PIPE).communicate())[0]
+    
+    plist_object = plistlib.loads(plist_byte_object)
     valid_usb_drives = traverse_plist(plist_object, 0, [], [])
     return valid_usb_drives
