@@ -45,5 +45,32 @@ Users need to understand that the only statistical data send back to the App Dev
 * Version of program
 * Did the script fail and if so why...
 
-## Testing Plan
+### Testing Plan
 Build CLI prototype and run it against multiple Mac models. Once a rock solid CLI tool has been created development can shift to creating a PyQtbased GUI.
+
+###Resources
+* [Python Style Guide](https://google.github.io/styleguide/pyguide.html)
+* [Python Exception Handling](http://www.programiz.com/python-programming/exception-handling)
+* [Python CSV imports](https://www.quora.com/Why-is-my-Python-code-not-downloading-the-CSV-file)
+* [Strings Python 2 vs 3](http://chimera.labs.oreilly.com/books/1230000000393/ch05.html#_solution_73)
+
+####Working with Gdata
+* [Retrieve Data from Public Google Spreadsheet Using Gdata Library](http://stackoverflow.com/questions/7561148/retrieve-data-from-public-google-spreadsheet-using-gdata-library)
+* [Getting the worksheet feed for a given spreadsheet](http://gdatatips.blogspot.com/2008/08/getting-worksheet-feed-for-given.html)
+* [Using-the-Google-Drive-Spreadsheet-API](http://heinrichhartmann.com/2015/05/17/Using-the-Google-Drive-Spreadsheet-API.html)
+* [gdata.spreadsheet.service.CellQuery](http://nullege.com/codes/search/gdata.spreadsheet.service.CellQuery)
+* [using-google-python-api-to-get-rows-from-a-google](http://mrwoof.tumblr.com/post/1004514567/using-google-python-api-to-get-rows-from-a-google)
+* [Google Spreadsheets API Chapter 17](http://mashupguide.net/1.0/html/ch17s08.xhtml)
+
+####Yes/No Python Function
+[python-command-line-yes-no-input](http://stackoverflow.com/questions/3041986/python-command-line-yes-no-input)
+
+####CLI Formatting of Drives
+[Part 1](http://www.theinstructional.com/guides/disk-management-from-the-command-line-part-1)
+[Part 2](http://www.theinstructional.com/guides/disk-management-from-the-command-line-part-2)
+[Part 3](http://www.theinstructional.com/guides/disk-management-from-the-command-line-part-3)
+[Using the hidutil](http://commandlinemac.blogspot.com/2008/12/using-hdiutil.html)
+
+####plist Lib
+[PSTLib.py](https://hg.python.org/cpython/file/2.7/Lib/plistlib.py)
+[plistlib changes from Python 2 to 3](https://docs.python.org/3/library/plistlib.html#plistlib.load)
