@@ -37,7 +37,7 @@ This software is licensed under the terms of the [GNU General Public License, ve
     * Gdata API used to retrive Google Sheets data
 * 0.2.0 Jan 28, 2016 - Migration to Python 3, Optimizations
     * Migrated to Python 3.x
-       * urllib replaces gdata for data retrieval of data
+       * urllib replaces gdata for retrieval of data
        * plistlib functions changed to accomodate 3.x deprecations
 
 
